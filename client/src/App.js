@@ -49,8 +49,7 @@ function App() {
      </Route>
 
      <Route path="/search" exact>
-        <Search    
-        />
+        <Search  />
      </Route>
 
     </div>

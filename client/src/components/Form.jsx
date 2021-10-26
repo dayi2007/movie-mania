@@ -3,8 +3,7 @@ import { Link, Route } from "react-router-dom";
 import Search from "./search";
 
 const Form = () =>{
-    const [movie, setMovie] = useState([]);
-    movie = "inception"
+    const [movie, setMovie] = useState(["home alone"]);
     console.log(movie)
 return (    
     <div>
