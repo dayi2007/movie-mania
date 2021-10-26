@@ -48,7 +48,7 @@ function App() {
       ))}   
      </Route>
 
-     <Route path="/search" exact>
+     <Route path="/search/:movie_id" exact>
         <Search  />
      </Route>
 

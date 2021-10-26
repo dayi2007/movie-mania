@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Redirect, useParams } from "react-router-dom";
 import React from "react";
+import Select from "./Select";
 
 
 
@@ -36,6 +37,7 @@ const Search = ( {movie} ) =>{
           <div>
             <h1 key={movie.id}>{movie.title}</h1> 
             <img src={movie.image} alt={movie.title}/>
+            <Select/>
          </div>
          ))} 
        </div> 
