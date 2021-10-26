@@ -1,23 +1,27 @@
 import axios from "axios"
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import Post from "./Post";
 
 const Select =()=>{
-    
-    // const API_URL_Movies_ID= `https://imdb-api.com/en/API/Title/${API_KEY_IMDB}/${ID}}`
-    // const API_KEY_IMDB= "k_uqk2e0we"
 
-    const API_KEY="key4quh96AxbVXmTppost"
-    const API_URL=`https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=${API_KEY}`
+    const API_KEY_IMDB= "k_uqk2e0we"
+    const API_URL_Movies_ID = `https://imdb-api.com/en/API/Title/${API_KEY_IMDB}/`
+   
+
+    // const API_KEY="key4quh96AxbVXmTppost"
+    // const API_URL=`https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=${API_KEY}`
     
     const[image, setImage] =useState("");
     const[title, setTitle] = useState("");
     const[description, setDescription] = useState("") ;
     const params = useParams();
-
+    console.log(params.movie)
 
     const selectMovie =async(ev)=> {
-        const movie_id = params.movie.id
+        console.log("selection")
+            const movie_id = params.movie.id
+       
 
         const getMovieData ={
             records: [
@@ -31,13 +35,12 @@ const Select =()=>{
                 }
             ]
         }
-        await axios.put(API_URL, getMovieData);
+        await axios.put(`${API_URL_Movies_ID}${movie_id}`, getMovieData);
     }
-
+    // <Post movie_id ={selectMovie}/>
     return(
         <div>
-            <Link to={``}
-            <button className="select" onClick={(ev) => selectMovie}>Select</button>
+            <button className="select" onClick={selectMovie}>Select</button>
         </div>
     )
 }

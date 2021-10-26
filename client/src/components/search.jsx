@@ -37,7 +37,9 @@ const Search = ( {movie} ) =>{
           <div>
             <h1 key={movie.id}>{movie.title}</h1> 
             <img src={movie.image} alt={movie.title}/>
-            <Select/>
+            <Select
+            key ={movie.id}
+            />
          </div>
          ))} 
        </div> 

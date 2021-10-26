@@ -1,6 +1,8 @@
-import { useParams } from "react-router"
+import axios from "axios"
+import { useParams, Route, Link } from "react-router-dom";
+import { useState } from "react";
 
-const Post =()=>{
+const Post =({movie_id})=>{
     // API_URL="https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?${API_KEY}"
     // API_KEY="key4quh96AxbVXmTppost"
 

@@ -4,7 +4,7 @@ import Search from "./search";
 
 const Form = () =>{
     const [movie, setMovie] = useState(["home alone"]);
-    console.log(movie)
+    // console.log(movie)
 return (    
     <div>
         <form>          
