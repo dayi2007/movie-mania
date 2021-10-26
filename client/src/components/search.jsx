@@ -7,10 +7,7 @@ import Select from "./Select";
 
 
 const API_URL= "https://imdb-api.com/en/API/Search"
-// 2007
- const API_KEY= "k_uqk2e0we"
-//prin
-// const API_KEY= "k_qrkqdxq0"
+
 
 const Search = ( {movie} ) =>{
     const [toggleFetch, setToggleFetch] = useState(true);
@@ -21,7 +18,7 @@ const Search = ( {movie} ) =>{
     useEffect (() => {
         console.log("Getting Started");  
         const getMovie = async () => {
-        const resp = await axios.get(`${API_URL}/${API_KEY}/${movie}`)
+        const resp = await axios.get(`${API_URL}/${process.env.REACT_APP_API_KEY}/${movie}`)
         console.log(resp.data.results);
         setMovieSearch(resp.data.results);
       }
@@ -31,10 +28,10 @@ const Search = ( {movie} ) =>{
 
 
     return(
-        <div>
-          <h1>Search page </h1>
-            {movieSearch.map((movie) =>( 
-          <div>
+          
+        <div className="movies">
+          {movieSearch.map((movie) =>( 
+          <div className="movie_div">
             <h1 key={movie.id}>{movie.title}</h1> 
             <img src={movie.image} alt={movie.title}/>
             <Select
@@ -43,6 +40,7 @@ const Search = ( {movie} ) =>{
          </div>
          ))} 
        </div> 
+    
 
     )
 }

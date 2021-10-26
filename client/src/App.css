@@ -4,10 +4,23 @@
 img {
   width: 150px;
 }
+nav {
+  align-items: baseline;
+}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movies{
+
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-evenly;
+}
+.movie_div{
+  padding: 15px;
+  width: 250px;
+  height: auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {

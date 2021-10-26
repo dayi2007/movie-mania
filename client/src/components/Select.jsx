@@ -5,8 +5,7 @@ import Post from "./Post";
 
 const Select =()=>{
 
-    const API_KEY_IMDB= "k_uqk2e0we"
-    const API_URL_Movies_ID = `https://imdb-api.com/en/API/Title/${API_KEY_IMDB}/`
+    const API_URL_Movies_ID = `https://imdb-api.com/en/API/Title/${process.env.REACT_APP_API_KEY}/`
    
 
     // const API_KEY="key4quh96AxbVXmTppost"
