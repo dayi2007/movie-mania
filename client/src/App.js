@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Link, Route } from "react-router-dom";
 import Form from './components/Form.jsx';
 import Post from './components/Post';
+import List from './components/List';
 
 // const API_URL= "https://imdb-api.com/en/API/SearchMovie"
 // const API_URL= "https://imdb-api.com/en/API/Search"
@@ -32,7 +33,7 @@ function App() {
     <div className="App">
       <nav>
         <Link to="/">Home</Link><br/>
-        {/* <Link to="/search">Search</Link> */}
+        <Link to="/list">My List</Link>
         <Route> <Form /> </Route>
       </nav>
 
@@ -49,9 +50,10 @@ function App() {
       ))}  
       </div> 
      </Route>
-
-     <Route path="/search/" exact>
-  
+     <Route path="/search/" exact>  
+     </Route>
+     <Route path="/list">
+       <List/>
      </Route>
 
     </div>

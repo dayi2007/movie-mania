@@ -1,11 +1,10 @@
 import axios from "axios"
-import {  Route, Link } from "react-router-dom";
 import { useState } from "react";
 
 const Post =({movie})=>{
 
     // const API_URL=`https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=${process.env.AIRTABLE_API_KEY}`
-    
+
     const API_URL=`https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=key4quh96AxbVXmTp`
     
     const[image, setImage] =useState("");
@@ -45,7 +44,7 @@ const Post =({movie})=>{
 
     return(
         <div>
-            <button className="select" onClick={selectMovie}>
+            <button className="select_button" onClick={selectMovie}>
                 Select
             </button>
         </div>

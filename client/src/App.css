@@ -20,7 +20,10 @@ nav {
 .movie_div{
   padding: 15px;
   width: 250px;
-  height: auto;
+  height: 450px;
+}
+.select_button{
+  float: inline-end;
 }
 
 @media (prefers-reduced-motion: no-preference) {
