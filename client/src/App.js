@@ -29,18 +29,21 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/">Home</Link><br/>
+        <Link to="/">Home</Link> <b />
         <Link to="/list">My List</Link>
-         <Form /> 
+        <Form />
+        
       </nav>
 
       <Route exact path="/" >
-        <h1>Home page</h1>
+        <h1>Most Popular Movies</h1>
         <div className="movies">
-            {movieSearch?.map((movie) =>( 
+            {movieSearch.map((movie) =>( 
           <div className="movie_div"  key={movie.id}>
             <h1>{movie.title}</h1> 
             <img src={movie.image} alt={movie.title}/>
+            <p>{movie.year}</p>
+            <p>{movie.crew}</p>
             <Post 
             movie={movie}/>
          </div>

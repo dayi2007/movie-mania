@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background: black;
+  /* background-image: url("./components/background1.jpg"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
 }
 img {
   width: 150px;
@@ -9,7 +13,7 @@ nav {
 }
 
 .movies{
-
+  color: aliceblue;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -19,8 +23,8 @@ nav {
 }
 .movie_div{
   padding: 15px;
-  width: 250px;
-  height: 450px;
+  width: 280px;
+  height: 480px;
 }
 .select_button{
   float: inline-end;

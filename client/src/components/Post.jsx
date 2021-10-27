@@ -3,15 +3,15 @@ import { useState } from "react";
 
 const Post =({movie})=>{
 
-    // const API_URL=`https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=${process.env.AIRTABLE_API_KEY}`
+    const API_URL=`https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=${process.env.REACT_APP_AIRTABLE_API_KEY}`
 
-    const API_URL="https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=key4quh96AxbVXmTp"
+
     
-    const[image, setImage] =useState("");
-    const[title, setTitle] = useState("");
-    const[year, setYear] = useState("");
-    const[description, setDescription] = useState("") ;
-    const[toggleFetch, setToggleFetch] =useState(true);
+    const image = movie.image;
+    const title = movie.title;
+    const year = movie.year;
+    const description = movie.description;
+    const [toggleFetch, setToggleFetch] =useState(true);
 
 
     const selectMovie =async(ev)=> {
@@ -19,10 +19,6 @@ const Post =({movie})=>{
         console.log("You Selected that movie") 
         console.log(movie) 
 
-        setTitle(movie.title);
-        setImage(movie.image);
-        setYear(movie.year);
-        setDescription(movie.crew);
 
         console.log({title})
         const getMovieData ={

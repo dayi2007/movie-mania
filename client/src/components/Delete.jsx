@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Delete = ( {movieData} ) =>{
 
-    const API_URL="https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=key4quh96AxbVXmTp"
+    const API_URL=`https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=${process.env.REACT_APP_AIRTABLE_API_KEY}`
 
     const[toggleFetch, setToggleFetch] =useState(false);
 
