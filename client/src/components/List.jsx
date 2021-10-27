@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react";
+import Delete from "./Delete";
 
 const List = () =>{
     const [movies, setMovies] = useState();
@@ -20,11 +21,14 @@ const List = () =>{
     return(
         <div className="movies">
             {movies?.map ((movie) => (
-                 <div className="movie_div">
+                 <div className="movie_div" key={movie.id}>
                 <h4>{movie.fields.title}</h4>
                 <img src={movie.fields.image} alt={movie.fields.title}/>
                 <p>{movie.fields.year}</p>
                 <p>{movie.fields.description}</p>
+                < Delete 
+                movieData = {movie}
+                />
                 </div> 
             ))}
         </div>

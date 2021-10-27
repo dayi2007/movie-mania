@@ -5,7 +5,7 @@ const Post =({movie})=>{
 
     // const API_URL=`https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=${process.env.AIRTABLE_API_KEY}`
 
-    const API_URL=`https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=key4quh96AxbVXmTp`
+    const API_URL="https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=key4quh96AxbVXmTp"
     
     const[image, setImage] =useState("");
     const[title, setTitle] = useState("");

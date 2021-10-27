@@ -16,8 +16,9 @@ const Form = () =>{
             const resp = await axios.get(`${API_URL}/${process.env.REACT_APP_API_KEY}/${movie}`)
             
             setMovieResults(resp.data.results);
-     
+            setMovie("")
     }
+    
   
 return (    
     <div>

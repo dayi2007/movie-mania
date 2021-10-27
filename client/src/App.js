@@ -31,10 +31,10 @@ function App() {
       <nav>
         <Link to="/">Home</Link><br/>
         <Link to="/list">My List</Link>
-        <Route> <Form /> </Route>
+         <Form /> 
       </nav>
 
-      <Route path="/" exact>
+      <Route exact path="/" >
         <h1>Home page</h1>
         <div className="movies">
             {movieSearch?.map((movie) =>( 
@@ -47,10 +47,6 @@ function App() {
       ))}  
       </div> 
      </Route>
-
-     {/* <Link to="/search" exact>
-
-      </Link> */}
 
      <Route path="/list" exact>
       <h1>My List</h1>
