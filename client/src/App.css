@@ -1,19 +1,29 @@
 .App {
+  color: aliceblue;
   text-align: center;
-  background: black;
-  /* background-image: url("./components/background1.jpg"); */
-  /* background-repeat: no-repeat; */
+  background: rgb(3, 13, 36);
   /* background-size: cover; */
 }
 img {
   width: 150px;
 }
+
 nav {
-  align-items: baseline;
+  background: linear-gradient(  
+    rgb(14, 31, 80) 16%,
+    rgba(2, 14, 41, 0.513) 55%
+  );
+  height: 60px;
+  max-width: 100%;
+}
+nav li {
+  display: inline-block;
+  line-height: 60px;
+  margin: 0px 20px;
 }
 
 .movies{
-  color: aliceblue;
+  color: rgb(225, 236, 246);
   text-align: center;
   display: flex;
   flex-direction: row;

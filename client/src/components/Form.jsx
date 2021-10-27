@@ -31,7 +31,7 @@ return (
         </form>
         {/* <Route path="/search"> */}
         <div className="movies">
-        {movieResults.map ((movie) => (
+        {movieResults?.map ((movie) => (
             <div className="movie_div" key={movie.id}>
             <h1 >{movie.title}</h1> 
             <img src={movie.image} alt={movie.title}/>

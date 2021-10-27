@@ -29,8 +29,8 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/">Home</Link> <b />
-        <Link to="/list">My List</Link>
+        <li><Link to="/">Home</Link> </li>
+        <li><Link to="/list">My List</Link></li>
         <Form />
         
       </nav>
@@ -38,7 +38,7 @@ function App() {
       <Route exact path="/" >
         <h1>Most Popular Movies</h1>
         <div className="movies">
-            {movieSearch.map((movie) =>( 
+            {movieSearch?.map((movie) =>( 
           <div className="movie_div"  key={movie.id}>
             <h1>{movie.title}</h1> 
             <img src={movie.image} alt={movie.title}/>
