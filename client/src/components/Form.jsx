@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import Select from "./Select";
+import Post from "./Post";
 
 const API_URL= "https://imdb-api.com/en/API/Search"
 
@@ -29,7 +29,7 @@ return (
             <div className="movie_div" key={movie.id}>
             <h1 >{movie.title}</h1> 
             <img src={movie.image} alt={movie.title}/>
-            <Select 
+            <Post 
             movie ={movie}/>
          </div>
         ))}

@@ -18,8 +18,7 @@ const Select =({movie})=>{
     console.log(movie)
 
     const selectMovie =async(ev)=> {
-        console.log("selection")
-         
+        console.log("selection")         
        
 
         const getMovieData ={
