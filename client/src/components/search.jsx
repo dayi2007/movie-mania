@@ -12,7 +12,6 @@ const API_URL= "https://imdb-api.com/en/API/Search"
 const Search = ( {movie} ) =>{
     const [toggleFetch, setToggleFetch] = useState(true);
     const [movieSearch, setMovieSearch] = useState([]);
-    // const [movie, setMovie] = useState([]);
 
 
     useEffect (() => {
@@ -30,13 +29,12 @@ const Search = ( {movie} ) =>{
     return(
           
         <div className="movies">
-          {movieSearch.map((movie) =>( 
-          <div className="movie_div">
-            <h1 key={movie.id}>{movie.title}</h1> 
+          {movieSearch?.map((movie) =>( 
+          <div className="movie_div" key={movie.id}>
+            <h1 >{movie.title}</h1> 
             <img src={movie.image} alt={movie.title}/>
-            <Select
-            key ={movie.id}
-            />
+            <Select 
+            movie ={movie}/>
          </div>
          ))} 
        </div> 

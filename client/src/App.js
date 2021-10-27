@@ -38,7 +38,7 @@ function App() {
 
       <Route path="/" exact>
       <h1>Home page</h1>
-            {/* {movieSearch.map((movie) =>( 
+            {/* {movieSearch?.map((movie) =>( 
               <div>
             <h1 key={movie.id}>{movie.title}</h1> 
             <img src={movie.image} alt={movie.title}/>
@@ -46,13 +46,9 @@ function App() {
       ))}    */}
      </Route>
 
-     <Route path="/search/:movie_id" exact>
-     {movieSearch.map((movie) =>( 
-        <Search 
-        key = {movie.id}
-        movieData={movie}
-         />
-     ))}
+     <Route path="/search/" exact>
+        <Search/>
+   
      </Route>
 
     </div>
