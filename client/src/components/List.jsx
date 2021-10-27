@@ -27,8 +27,6 @@ const List = () =>{
                 <p>{movie.fields.description}</p>
                 </div> 
             ))}
-        
-
         </div>
     )
 } 

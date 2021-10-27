@@ -10,14 +10,11 @@ import List from './components/List';
 // const API_URL= "https://imdb-api.com/en/API/Search"
 const API_URL= "https://imdb-api.com/en/API/MostPopularMovies"
 
-
-
 function App() {
 
   const [toggleFetch, setToggleFetch] = useState(true);
   const [movieSearch, setMovieSearch] = useState([]);
- 
-  
+   
 
   useEffect (() => {
     console.log("Getting Started");  
@@ -38,8 +35,8 @@ function App() {
       </nav>
 
       <Route path="/" exact>
-      <h1>Home page</h1>
-      <div className="movies">
+        <h1>Home page</h1>
+        <div className="movies">
             {movieSearch?.map((movie) =>( 
           <div className="movie_div"  key={movie.id}>
             <h1>{movie.title}</h1> 
@@ -50,10 +47,14 @@ function App() {
       ))}  
       </div> 
      </Route>
-     <Route path="/search/" exact>  
-     </Route>
-     <Route path="/list">
-       <List/>
+
+     {/* <Route path="/search/" exact>
+       <Form />  
+     </Route> */}
+
+     <Route path="/list" exact>
+      <h1>My List</h1>
+        <List/>
      </Route>
 
     </div>
