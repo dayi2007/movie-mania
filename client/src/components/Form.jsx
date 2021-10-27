@@ -2,11 +2,13 @@ import { useState } from "react";
 import axios from "axios";
 import Post from "./Post";
 
+
 const API_URL= "https://imdb-api.com/en/API/Search"
 
 const Form = () =>{
     const [movie, setMovie] = useState("");
     const [movieResults, setMovieResults] = useState();
+  
     
 
     const handleSubmit = async(ev) =>{
@@ -16,14 +18,16 @@ const Form = () =>{
             setMovieResults(resp.data.results);
      
     }
-
+  
 return (    
     <div>
+
         <form onSubmit={handleSubmit}>          
             <label htmlFor="movie-search">Search a Movie: </label>
             <input type="text" id="movie-search" placeholder="Search for a movie" onChange={(ev) => setMovie(ev.target.value)} value={movie}></input>
             <button type="submit">Search</button>         
         </form>
+
         <div className="movies">
         {movieResults?.map ((movie) => (
             <div className="movie_div" key={movie.id}>
@@ -32,8 +36,9 @@ return (
             <Post 
             movie ={movie}/>
          </div>
-        ))}
+        ))}        
         </div>
+    
 
     </div>
     )

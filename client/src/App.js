@@ -12,7 +12,7 @@ const API_URL= "https://imdb-api.com/en/API/MostPopularMovies"
 
 function App() {
 
-  const [toggleFetch, setToggleFetch] = useState(true);
+  const [toggleFetch, ] = useState(true);
   const [movieSearch, setMovieSearch] = useState([]);
    
 
@@ -48,9 +48,9 @@ function App() {
       </div> 
      </Route>
 
-     {/* <Route path="/search/" exact>
-       <Form />  
-     </Route> */}
+     {/* <Link to="/search" exact>
+
+      </Link> */}
 
      <Route path="/list" exact>
       <h1>My List</h1>
