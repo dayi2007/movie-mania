@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { Redirect, Route } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 
@@ -19,15 +19,22 @@ const Form = ({setMovieResults,  movieResults}) =>{
             const resp = await axios.get(`${API_URL}/${process.env.REACT_APP_API_KEY}/${movie}`)
 
             setMovieResults(resp.data.results);
-            setMovie("")
+           
 
-            setRedirectSelect(true);
             setToggleFetch(!toggleFetch);
-    }
-    if (redirectSelect){
-        return <Redirect to="/select"/>
-    }
+            
+            setRedirectSelect(true);
+            setMovie("")
+        }
     
+            let history = useHistory();
+          
+            function handleClick() {
+              history.push("/select");
+            }
+            if (redirectSelect){
+            handleClick()    }
+        
   
 return (    
     <div>
