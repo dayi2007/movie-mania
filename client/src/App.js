@@ -5,6 +5,7 @@ import { Link, Route } from "react-router-dom";
 import Form from './components/Form.jsx';
 import Post from './components/Post';
 import List from './components/List';
+import Select from './components/Select';
 
 // const API_URL= "https://imdb-api.com/en/API/SearchMovie"
 // const API_URL= "https://imdb-api.com/en/API/Search"
@@ -40,7 +41,7 @@ function App() {
         <div className="movies">
             {movieSearch?.map((movie) =>( 
           <div className="movie_div"  key={movie.id}>
-            <h1>{movie.title}</h1> 
+            <h2>{movie.title}</h2> 
             <img src={movie.image} alt={movie.title}/>
             <p>{movie.year}</p>
             <p>{movie.crew}</p>
@@ -51,7 +52,11 @@ function App() {
       </div> 
      </Route>
 
-     <Route path="/list" exact>
+     <Route exact path="/select">  
+            <Select />
+       </Route>
+
+     <Route exact path="/list" >
       <h1>My List</h1>
         <List/>
      </Route>

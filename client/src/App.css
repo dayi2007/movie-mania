@@ -13,14 +13,21 @@ nav {
     rgb(14, 31, 80) 16%,
     rgba(2, 14, 41, 0.513) 55%
   );
-  height: 60px;
+ 
   max-width: 100%;
 }
 nav li {
   display: inline-block;
   line-height: 60px;
   margin: 0px 20px;
+  text-decoration: none;
 }
+ nav li a {
+  color: wheat;
+  font-size: 18px;
+  font-weight: bolder;
+  text-decoration: none;
+} 
 
 .movies{
   color: rgb(225, 236, 246);
