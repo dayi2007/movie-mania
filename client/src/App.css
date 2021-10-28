@@ -38,7 +38,9 @@ a:hover {
   font-size: 20px;
   font-weight: bolder;
 }
-
+form{
+  float: right;
+}
 input{
   line-height: 30px;  
   color: wheat;
@@ -63,7 +65,7 @@ label{
   font-weight: bolder;
   margin: 15px 0px;
 }
-
+/* Button Search navbar */
 #movie-search-bttn{
   margin: 10px 10px;
   font-size: 18px;
@@ -81,9 +83,8 @@ label{
   font-size: 20px;
   font-weight: bolder;
 }
-form{
-  float: right;
-}
+
+
 .body{
   padding-top: 50px;
 }
@@ -103,6 +104,8 @@ form{
   width: 280px;
   height: 480px;
 }
+
+/* Button Delete/Watched */
 .select_button{
   border: none;
   width: 250px;
@@ -187,8 +190,9 @@ form{
 .side{
   width: 550px;
   float: right;
-  font-size: 15px;
-  color: aqua;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
   padding: 0;
   margin: 0;
 }
