@@ -35,9 +35,8 @@ return (
         <form onSubmit={handleSubmit}>  
    
             <label htmlFor="movie-search">Search a Movie: </label>
-            <input type="text" id="movie-search" placeholder="Search for a movie" onChange={(ev) => setMovie(ev.target.value)} value={movie}></input>
-         
-            <button type="submit">Search</button>    
+            <input type="text" id="movie-search" placeholder="Search for a movie" onChange={(ev) => setMovie(ev.target.value)} value={movie}></input>         
+            <button type="submit" id="movie-search-bttn">Search</button>    
   
         </form>
 

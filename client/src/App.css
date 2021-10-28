@@ -12,22 +12,58 @@ nav {
   background: linear-gradient(  
     rgb(14, 31, 80) 16%,
     rgba(2, 14, 41, 0.513) 55%
-  );
- 
+  ); 
   max-width: 100%;
 }
 nav li {
-  display: inline-block;
+  float: left;
   line-height: 60px;
   margin: 0px 20px;
   text-decoration: none;
+  list-style: none;
 }
+
  nav li a {
+  list-style: none;
   color: wheat;
   font-size: 18px;
   font-weight: bolder;
   text-decoration: none;
 } 
+
+input{
+  line-height: 30px;  
+  color: wheat;
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 12px 20px;
+  float: left;
+}
+
+#movie-search{
+  line-height: 30px;  
+  color: wheat;
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 50pxpx 20px;
+  float: right;
+}
+
+label{
+  line-height: 30px;  
+  color: wheat;
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 15px 0px;
+  float: right;
+}
+
+#movie-search-bttn{
+  float: right;
+  margin: 10px 20px;
+  font-size: 18px;
+  font-weight: bolder;
+}
 
 .movies{
   color: rgb(225, 236, 246);
