@@ -11,7 +11,7 @@ import Select from './components/Select';
 // const API_URL= "https://imdb-api.com/en/API/Search"
 const API_URL= "https://imdb-api.com/en/API/MostPopularMovies"
 
-function App() {
+function App({setMovieResults,  movieResults}) {
 
   const [toggleFetch, ] = useState(true);
   const [movieSearch, setMovieSearch] = useState([]);
@@ -49,16 +49,19 @@ function App() {
             movie={movie}/>
          </div>
       ))} 
-      <div className="side">
+      {/* <div className="side">
         <h3>My List </h3>
         <List /> 
-      </div> 
+      </div>  */}
       </div>
 
      </Route>
 
      <Route exact path="/select">  
-            <Select />
+            <Select
+              setMovieResults = {setMovieResults}
+              movieResults = {movieResults}
+             />
        </Route>
 
      <Route exact path="/list" >

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
-import Select from "./Select";
-import { Redirect, Route } from "react-router-dom";
+// import Select from "./Select";
+// import { Redirect, Route } from "react-router-dom";
+import App from "../App";
 
 
 const API_URL= "https://imdb-api.com/en/API/Search"
@@ -40,10 +41,10 @@ return (
   
         </form>
 
-        <Select 
+        <App
             setMovieResults = {setMovieResults}
-            movieResults = {movieResults}
-        />        
+            movieResults = {movieResults}/>
+            
 
 
     </div>
