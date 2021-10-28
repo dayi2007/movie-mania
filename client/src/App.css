@@ -103,8 +103,12 @@ form{
 }
 
 .select_button:hover{
-  background: rgba(11, 53, 133, 0.5);
-  /* background: rgba(2, 14, 41, 0.513); */
+  /* background: rgba(11, 53, 133, 0.5); */
+  color: rgb(80, 108, 185);
+  /* color: wheat; */
+  font-size: 20px;
+  font-weight: bolder;
+  background: rgba(2, 14, 41, 0.513);
 }
 
 
