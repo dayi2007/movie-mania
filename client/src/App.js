@@ -35,7 +35,7 @@ function App() {
         <Form />
         
       </nav>
-
+    <div className="body">
       <Route exact path="/" >
         <h1>Most Popular Movies</h1>
         <div className="movies">
@@ -60,8 +60,8 @@ function App() {
       <h1>My List</h1>
         <List/>
      </Route>
-
-    </div>
+     </div>
+  </div>
   );
 }
 

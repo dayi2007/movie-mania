@@ -13,7 +13,9 @@ nav {
     rgb(14, 31, 80) 16%,
     rgba(2, 14, 41, 0.513) 55%
   ); 
-  max-width: 100%;
+  top: 0;
+  width: 100%;
+  position: fixed;
 }
 nav li {
   float: left;
@@ -31,22 +33,25 @@ nav li {
   text-decoration: none;
 } 
 
+a:hover {
+  color: rgb(85, 83, 83);
+}
+
 input{
   line-height: 30px;  
   color: wheat;
   font-size: 18px;
   font-weight: bolder;
   margin: 12px 20px;
-  float: left;
+ 
 }
 
 #movie-search{
-  line-height: 30px;  
+  line-height: 25px;  
   color: wheat;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bolder;
-  margin: 50pxpx 20px;
-  float: right;
+  margin: 20px 0px;
 }
 
 label{
@@ -55,14 +60,18 @@ label{
   font-size: 18px;
   font-weight: bolder;
   margin: 15px 0px;
-  float: right;
 }
 
 #movie-search-bttn{
-  float: right;
-  margin: 10px 20px;
+  margin: 10px 10px;
   font-size: 18px;
   font-weight: bolder;
+}
+form{
+  float: right;
+}
+.body{
+  padding-top: 50px;
 }
 
 .movies{
@@ -80,8 +89,13 @@ label{
   height: 480px;
 }
 .select_button{
-  float: inline-end;
+  margin-bottom: auto;
+  margin-top: auto;
+  flex-grow: 1;
+ 
+
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
