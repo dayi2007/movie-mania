@@ -89,11 +89,22 @@ form{
   height: 480px;
 }
 .select_button{
-  margin-bottom: auto;
-  margin-top: auto;
-  flex-grow: 1;
- 
+  align-self: flex-end;
+  border: none;
+  width: 200px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bolder;
+  color: aliceblue;
+  background: linear-gradient(  
+    rgb(14, 31, 80) 16%,
+    rgba(2, 14, 41, 0.513) 55%
+  );  
+}
 
+.select_button:hover{
+  background: rgba(11, 53, 133, 0.5);
+  /* background: rgba(2, 14, 41, 0.513); */
 }
 
 
