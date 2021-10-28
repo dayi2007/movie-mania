@@ -41,7 +41,7 @@ const Post =({movie})=>{
     return(
         <div>
             <button className="select_button" onClick={selectMovie}>
-                Select
+                Add it to my List
             </button>
         </div>
     )

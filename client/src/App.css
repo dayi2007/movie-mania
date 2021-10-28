@@ -124,8 +124,20 @@ form{
   font-size: 20px;
   font-weight: bolder;
   background: rgba(2, 14, 41, 0.513);
+  cursor: pointer;
 }
 
+.side{
+  width: 550px;
+  float: right;
+  font-size: 15px;
+  color: aqua;
+  padding: 0;
+  margin: 0;
+}
+.side img{
+  size: 50%;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -133,20 +145,9 @@ form{
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+
+
 
 @keyframes App-logo-spin {
   from {

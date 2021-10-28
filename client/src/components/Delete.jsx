@@ -18,7 +18,7 @@ const Delete = ( {movieData} ) =>{
 
     return(
         <div>
-            <button className="select_button" onClick={deleteFromList}>Delete from List</button>
+            <button className="select_button" onClick={deleteFromList}>Watched</button>
         </div>
     )
 }

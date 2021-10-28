@@ -37,7 +37,7 @@ function App() {
       </nav>
     <div className="body">
       <Route exact path="/" >
-        <h1>Most Popular Movies</h1>
+        <h1>Now Showing</h1>
         <div className="movies">
             {movieSearch?.map((movie) =>( 
           <div className="movie_div"  key={movie.id}>
@@ -48,8 +48,13 @@ function App() {
             <Post 
             movie={movie}/>
          </div>
-      ))}  
+      ))} 
+      <div className="side">
+        <h3>My List </h3>
+        <List /> 
       </div> 
+      </div>
+
      </Route>
 
      <Route exact path="/select">  
