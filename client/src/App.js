@@ -22,7 +22,6 @@ function App() {
     console.log("Getting Started");  
     const getMovies = async () => {
     const resp = await axios.get(`${API_URL}/${process.env.REACT_APP_API_KEY}`)
-     console.log(resp.data.items[10]);
     setMovieSearch(resp.data.items);
   }
   getMovies();
@@ -53,10 +52,10 @@ function App() {
             movie={movie}/>
          </div>
       ))} 
-      {/* <div className="side">
+      <div className="side">
         <h3>My List </h3>
         <List /> 
-      </div>  */}
+      </div> 
       </div>
 
      </Route>

@@ -1,7 +1,7 @@
 import Post from "./Post";
 
 
-const Select =({setMovieResults,  movieResults})=>{
+const Select =({ movieResults})=>{
 
      console.log(movieResults)
 

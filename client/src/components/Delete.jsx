@@ -5,7 +5,7 @@ const Delete = ( {movieData} ) =>{
 
     const API_URL=`https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=${process.env.REACT_APP_AIRTABLE_API_KEY}`
 
-    const[toggleFetch, setToggleFetch] =useState(false);
+    const[toggleFetch, setToggleFetch] =useState(true);
 
 
     const deleteFromList =async () =>{
@@ -15,10 +15,17 @@ const Delete = ( {movieData} ) =>{
         setToggleFetch(!toggleFetch);
     };
 
+    function refreshPage(){ 
+        window.location.reload(); 
+    }
+    if (!toggleFetch){
+        refreshPage()
+    }
+
 
     return(
         <div>
-            <button className="select_button" onClick={deleteFromList}>Watched</button>
+            <button className="select_button" onClick={deleteFromList}><span>Delete</span><span>Watched</span></button>
         </div>
     )
 }

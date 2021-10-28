@@ -2,7 +2,7 @@
   color: aliceblue;
   text-align: center;
   background: rgb(3, 13, 36);
-  /* background-size: cover; */
+  background-size: cover;
 }
 img {
   width: 150px;
@@ -56,7 +56,6 @@ input{
   margin: 20px 0px;
 }
 
-
 label{
   line-height: 30px;  
   color: wheat;
@@ -97,6 +96,7 @@ form{
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: space-evenly;
+  flex: 1;
 }
 .movie_div{
   padding: 15px;
@@ -104,27 +104,84 @@ form{
   height: 480px;
 }
 .select_button{
-  align-self: flex-end;
   border: none;
-  width: 200px;
+  width: 250px;
   height: 40px;
+  color: #fff;
+  line-height: 42px;
   font-size: 15px;
   font-weight: bolder;
-  color: aliceblue;
+  margin-top: auto;
+  flex: none;
+  box-shadow: none;
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.select_button span {
+  background: rgb(0,172,238);
   background: linear-gradient(  
     rgb(14, 31, 80) 16%,
     rgba(2, 14, 41, 0.513) 55%
   );  
+  display: block;
+  position: absolute;
+  width: 250px;
+  height: 40px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
-
-.select_button:hover{
-  /* background: rgba(11, 53, 133, 0.5); */
-  color: rgb(80, 108, 185);
-  /* color: wheat; */
-  font-size: 20px;
-  font-weight: bolder;
-  background: rgba(2, 14, 41, 0.513);
-  cursor: pointer;
+.select_button span:nth-child(1) {
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.select_button span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.select_button:hover span:nth-child(1) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.select_button:hover span:nth-child(2) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+ color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
 }
 
 .side{
@@ -136,7 +193,7 @@ form{
   margin: 0;
 }
 .side img{
-  size: 50%;
+  width: 100px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

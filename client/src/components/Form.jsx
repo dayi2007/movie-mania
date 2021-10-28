@@ -6,29 +6,24 @@ import { useHistory } from "react-router-dom";
 
 const API_URL= "https://imdb-api.com/en/API/Search"
 
-const Form = ({setMovieResults,  movieResults}) =>{
+const Form = ({setMovieResults}) =>{
 
-    const [movie, setMovie] = useState("");
+    const[movie, setMovie] = useState("");
     const[toggleFetch, setToggleFetch] =useState(true);
     const[redirectSelect, setRedirectSelect] = useState(false) ;
-  
+    let history = useHistory();
     
 
     const handleSubmit = async(ev) =>{
         ev.preventDefault(); 
             const resp = await axios.get(`${API_URL}/${process.env.REACT_APP_API_KEY}/${movie}`)
+            setMovieResults(resp.data.results);    
 
-            setMovieResults(resp.data.results);
-           
-
-            setToggleFetch(!toggleFetch);
-            
+            setToggleFetch(!toggleFetch);            
             setRedirectSelect(true);
             setMovie("")
         }
-    
-            let history = useHistory();
-          
+             
             function handleClick() {
               history.push("/select");
             }

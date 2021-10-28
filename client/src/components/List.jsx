@@ -11,8 +11,8 @@ const List = () =>{
     useEffect (() => {
     const listMovies = async () => {
       const resp = await axios.get(API_URL)
-    //   console.log(resp.data.records);
-        setMovies(resp.data.records)
+      setMovies(resp.data.records)
+
     }
     listMovies();
   }, [toggleFetch]);
