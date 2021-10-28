@@ -1,5 +1,6 @@
 import Post from "./Post";
-import { Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Form from "./Form";
 
 const Select =({setMovieResults,  movieResults})=>{
 
@@ -8,10 +9,15 @@ const Select =({setMovieResults,  movieResults})=>{
 
     return(
         <div>  
+            {/* <nav>
+            <li><Link to="/">Home</Link> </li>
+            <li><Link to="/list">My List</Link></li>
+            <Form />
+            </nav> */}
              <div className="movies">
             {movieResults?.map ((movie) => (
             <div className="movie_div" key={movie.id}>
-            <h1 >{movie.title}</h1> 
+            <h2 >{movie.title}</h2> 
             <img src={movie.image} alt={movie.title}/>
             <p>{movie.year} {movie.description}</p>
             <Post 

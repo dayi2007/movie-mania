@@ -11,10 +11,11 @@ import Select from './components/Select';
 // const API_URL= "https://imdb-api.com/en/API/Search"
 const API_URL= "https://imdb-api.com/en/API/MostPopularMovies"
 
-function App({setMovieResults,  movieResults}) {
+function App() {
 
   const [toggleFetch, ] = useState(true);
   const [movieSearch, setMovieSearch] = useState([]);
+  const [movieResults, setMovieResults] = useState([]);
    
 
   useEffect (() => {
@@ -32,13 +33,16 @@ function App({setMovieResults,  movieResults}) {
       <nav>
         <li><Link to="/">Home</Link> </li>
         <li><Link to="/list">My List</Link></li>
-        <Form />
-        
+        <Form
+           setMovieResults = {setMovieResults}
+           movieResults = {movieResults} />        
       </nav>
+
     <div className="body">
-      <Route exact path="/" >
+
+      <Route path="/" exact>
         <h1>Now Showing</h1>
-        <div className="movies">
+        <div className="movies" id="main-side">
             {movieSearch?.map((movie) =>( 
           <div className="movie_div"  key={movie.id}>
             <h2>{movie.title}</h2> 
@@ -57,17 +61,19 @@ function App({setMovieResults,  movieResults}) {
 
      </Route>
 
-     <Route exact path="/select">  
-            <Select
-              setMovieResults = {setMovieResults}
-              movieResults = {movieResults}
-             />
+     <Route path="/select" exact> 
+     <h1>Search</h1>
+        <Select
+          setMovieResults = {setMovieResults}
+          movieResults = {movieResults}
+        />
        </Route>
 
-     <Route exact path="/list" >
+     <Route path="/list" exact>
       <h1>My List</h1>
         <List/>
      </Route>
+
      </div>
   </div>
   );
