@@ -33,7 +33,7 @@ function App() {
       <nav>
         <li><Link to="/">Home</Link> </li>
         <li><Link to="/list">My List</Link></li>
-        <li><Link to="/recomend">Favorites</Link></li>
+        {/* <li><Link to="/recomend">Favorites</Link></li> */}
         <Form
            setMovieResults = {setMovieResults}
            movieResults = {movieResults} />        
