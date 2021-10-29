@@ -255,10 +255,33 @@ label{
   width: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 600px) {
+  form{
+    float: center;
   }
+  input{
+    line-height: 15px;     
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 12px 20px;
+   
+  }
+  
+  #movie-search{
+    line-height: 25px;  
+    font-size: 17px;
+    font-weight: bolder;
+    margin: 20px 0px;
+  }
+  
+  label{
+    line-height: 30px;  
+    color: wheat;
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 15px 0px;
+  }
+  
 }
 
 
