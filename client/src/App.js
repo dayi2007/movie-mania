@@ -52,10 +52,10 @@ function App() {
             movie={movie}/>
          </div>
       ))} 
-      <div className="side">
+      {/* <div className="side">
         <h3>My List </h3>
         <List /> 
-      </div> 
+      </div>  */}
       </div>
 
      </Route>

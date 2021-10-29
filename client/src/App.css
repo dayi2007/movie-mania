@@ -65,23 +65,79 @@ label{
   font-weight: bolder;
   margin: 15px 0px;
 }
+
+
 /* Button Search navbar */
 #movie-search-bttn{
-  margin: 10px 10px;
   font-size: 18px;
   font-weight: bolder;
   color: wheat;
   border: none;
-  background: linear-gradient(
-  rgba(81, 131, 248, 0.274) 16%,
-    rgba(18, 35, 85, 0.623) 55%
-  
-  );  
+  background: transparent;
+  width: 150px;
+  height: 0px;
 }
-#movie-search-bttn:hover{
-  color: rgb(80, 108, 185);
-  font-size: 20px;
-  font-weight: bolder;
+#movie-search-bttn span {
+  background: rgb(0,172,238);
+  background: linear-gradient(  
+    rgb(14, 31, 80) 16%,
+    rgba(2, 14, 41, 0.513) 55%
+  );  
+  display: block;
+  position: absolute;
+  top: 25px;
+  width: 130px;
+  height: 40;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 5px;
+  padding: 0;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+#movie-search-bttn span:nth-child(1) {
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+#movie-search-bttn span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+#movie-search-bttn:hover span:nth-child(1) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+#movie-search-bttn:hover span:nth-child(2) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+ color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
 }
 
 
@@ -218,3 +274,4 @@ label{
     transform: rotate(360deg);
   }
 }
+

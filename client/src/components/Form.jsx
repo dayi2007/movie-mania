@@ -38,7 +38,7 @@ return (
    
             <label htmlFor="movie-search">Search a Movie: </label>
             <input type="text" id="movie-search" placeholder="Search for a movie" onChange={(ev) => setMovie(ev.target.value)} value={movie}></input>         
-            <button type="submit" id="movie-search-bttn">Search</button>      
+            <button type="submit" id="movie-search-bttn" ><span>Movie Lookup</span><span>Search</span></button>      
         </form>        
 
 

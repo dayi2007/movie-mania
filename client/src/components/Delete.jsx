@@ -25,7 +25,7 @@ const Delete = ( {movieData} ) =>{
 
     return(
         <div>
-            <button className="select_button" onClick={deleteFromList}><span>Delete</span><span>Watched</span></button>
+            <button className="select_button" onClick={deleteFromList}><span>Delete form List</span><span>Watched</span></button>
         </div>
     )
 }
