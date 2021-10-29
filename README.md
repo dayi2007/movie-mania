@@ -1,5 +1,6 @@
 
 # Project Overview
+https://movie-mania-list.netlify.app/list
 
 ## Project Name
 
@@ -21,38 +22,29 @@ Show your component hierarchy here! Use [this](https://cms-assets.tutsplus.com/u
 Show us a snippet of JSON returned by your Airtable (you can find it under the API documentation) so we know you can access it and get the info you need. This __must__ be properly formatted. An example is below:
 
 ```json
-{
-    "records": [
-        {
-            "id": "recONRzIUTuZ5lXaF",
-            "fields": {
-                "author": "Liz Yrineo",
-                "setup": "Why did the tomato turn red?",
-                "punchline": "Because it saw the salad dressing!"
-            },
-            "createdTime": "2020-11-30T16:03:09.000Z"
-        },
-        {
-            "id": "rec3oYZ5Tp0AIDsKe",
-            "fields": {
-                "author": "Rachel Moskowitz",
-                "setup": "What did the green grape say to the red grape?",
-                "punchline": "Breathe, idiot, breathe!"
-            },
-            "createdTime": "2020-11-30T16:03:09.000Z"
-        },
-        {
-            "id": "recA34tOaoE1IVeC1",
-            "fields": {
-                "author": "Gary Grant",
-                "setup": "How do you make holy water?",
-                "punchline": "You boil the hell out of it!"
-            },
-            "createdTime": "2020-11-30T16:03:09.000Z"
+const selectMovie =async(ev)=> {
+        ev.preventDefault();
+        console.log("You Selected that movie") 
+        console.log(movie) 
+
+
+        console.log({title})
+        const getMovieData ={
+            records: [
+                { 
+                    fields: {
+                        title,
+                        image,
+                        year,
+                        description,
+                    }
+                }
+            ]
         }
-    ],
-    "offset": "recA34tOaoE1IVeC1"
-}
+
+    await axios.post(API_URL, getMovieData);
+        setToggleFetch(!toggleFetch);
+        setRedirectSelect(true);}
 ```
 
 ### MVP/PostMVP
@@ -66,8 +58,7 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 - Find and use external api
 - Add AirTable API  
 - Render data on page 
-- Allow user to choose favorites
-- Select want to watch or already watched
+- Select Want to watch or Already watched/Delete
 
 #### PostMVP  
 *These are examples only. Replace with your own Post-MVP features.*
@@ -82,12 +73,12 @@ This schedule will be used to keep track of your progress throughout the week an
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|10/22| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|10/22| Project Approval | Incomplete
-|10/25| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|10/24| Pseudocode / actual code | Incomplete
-|10/26| Initial Clickable Model  | Incomplete
-|10/27| MVP | Incomplete
+|10/22| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|10/22| Project Approval | Complete
+|10/25| Core Application Structure (HTML, CSS, etc.) | Complete
+|10/24| Pseudocode / actual code | Complete
+|10/26| Initial Clickable Model  | Complete
+|10/27| MVP | Complete
 |10/29| Presentations | Incomplete
 
 ## Timeframes
@@ -105,9 +96,13 @@ Time frames are also key in the development cycle.  You have limited time to cod
 ## SWOT Analysis
 
 ### Strengths:
+Renders IMDB API and Takes information to Airtable, storing for future use.
 
 ### Weaknesses:
+Takes long to load sometimes.
 
 ### Opportunities:
+Can get a like for a movie and get sugestions to movies that you  may like.
 
 ### Threats:
+API just has 100 requests per day.
