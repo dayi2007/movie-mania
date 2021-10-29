@@ -72,8 +72,9 @@ function App() {
       <h1>My List</h1>
         <List/>
      </Route>
-
+     
      </div>
+     
   </div>
   );
 }
