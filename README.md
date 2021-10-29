@@ -44,7 +44,8 @@ const selectMovie =async(ev)=> {
 
     await axios.post(API_URL, getMovieData);
         setToggleFetch(!toggleFetch);
-        setRedirectSelect(true);}
+        setRedirectSelect(true);
+        }
 ```
 
 ### MVP/PostMVP
