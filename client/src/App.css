@@ -7,7 +7,6 @@
 img {
   width: 150px;
 }
-
 nav {
   background: linear-gradient(  
     rgb(14, 31, 80) 16%,
@@ -24,7 +23,6 @@ nav li {
   text-decoration: none;
   list-style: none;
 }
-
  nav li a {
   list-style: none;
   color: wheat;
@@ -32,7 +30,6 @@ nav li {
   font-weight: bolder;
   text-decoration: none;
 } 
-
 a:hover {
   color: rgb(80, 108, 185);
   font-size: 20px;
@@ -49,14 +46,12 @@ input{
   margin: 12px 20px;
  
 }
-
 #movie-search{
   line-height: 25px;  
   font-size: 17px;
   font-weight: bolder;
   margin: 20px 0px;
 }
-
 label{
   line-height: 30px;  
   color: wheat;
@@ -66,7 +61,8 @@ label{
 }
 
 
-/* Button Search navbar */
+/* Button Search navbar style from https://codepen.io/yuhomyan/pen/OJMejWJ */
+
 #movie-search-bttn{
   font-size: 18px;
   font-weight: bolder;
@@ -139,11 +135,9 @@ label{
   transform: rotateX(-90deg);
 }
 
-
 .body{
   padding-top: 50px;
 }
-
 .movies{
   color: rgb(225, 236, 246);
   text-align: center;
@@ -160,7 +154,7 @@ label{
   height: 480px;
 }
 
-/* Button Delete/Watched */
+/* Button Delete/Watched style from https://codepen.io/yuhomyan/pen/OJMejWJ */
 .select_button{
   border: none;
   width: 250px;
@@ -180,7 +174,6 @@ label{
   background: transparent;
   cursor: pointer;
 }
-
 .select_button span {
   background: rgb(0,172,238);
   background: linear-gradient(  
@@ -241,7 +234,6 @@ label{
   -moz-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
 }
-
 .side{
   width: 550px;
   float: right;
@@ -256,23 +248,19 @@ label{
 }
 
 @media screen and (max-width: 600px) {
-  form{
-    float: center;
-  }
+
   input{
     line-height: 15px;     
     font-size: 12px;
     font-weight: bolder;
     margin: 12px 20px;   
-  }
-  
+  }  
   #movie-search{
     line-height: 15px;  
     font-size: 12px;
     font-weight: bolder;
-    margin: 20px 0px;
-  }
-  
+    margin: 0px 0px;
+  }  
   label{
     line-height: 15px;  
     color: wheat;
@@ -285,11 +273,25 @@ label{
     width: 120px;
   }
   #movie-search-bttn span { 
-    top: 85px;
+    top: 70px;
     width: 100px;
     height: 80;    
   }
+  nav li {
+    margin-left:85px;
+  }
   
+   nav li a {
+    font-size: 12px;
+  } 
+  .body{
+    padding-top: 80px;
+  }
+  .movie_div{
+    padding: 0;
+    width: auto;
+    height: auto;
+  }
 }
 
 
