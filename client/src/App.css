@@ -43,7 +43,7 @@ form{
 }
 input{
   line-height: 30px;  
-  color: wheat;
+ 
   font-size: 18px;
   font-weight: bolder;
   margin: 12px 20px;
@@ -52,7 +52,6 @@ input{
 
 #movie-search{
   line-height: 25px;  
-  color: wheat;
   font-size: 17px;
   font-weight: bolder;
   margin: 20px 0px;

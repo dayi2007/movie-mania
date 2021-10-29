@@ -36,6 +36,7 @@ const Post =({movie})=>{
 
     await axios.post(API_URL, getMovieData);
     setToggleFetch(!toggleFetch);
+    alert("movie has been added to your list")
     }
 
     return(
