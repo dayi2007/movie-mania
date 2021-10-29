@@ -255,45 +255,42 @@ label{
   width: 100px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
   form{
     float: center;
   }
   input{
     line-height: 15px;     
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bolder;
-    margin: 12px 20px;
-   
+    margin: 12px 20px;   
   }
   
   #movie-search{
-    line-height: 25px;  
-    font-size: 17px;
+    line-height: 15px;  
+    font-size: 12px;
     font-weight: bolder;
     margin: 20px 0px;
   }
   
   label{
-    line-height: 30px;  
+    line-height: 15px;  
     color: wheat;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bolder;
     margin: 15px 0px;
+  }
+  #movie-search-bttn{
+    font-size: 12px;
+    width: 120px;
+  }
+  #movie-search-bttn span { 
+    top: 85px;
+    width: 100px;
+    height: 80;    
   }
   
 }
 
 
-
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
