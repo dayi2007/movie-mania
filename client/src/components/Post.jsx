@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState } from "react";
+import { Redirect } from "react-router-dom";
 
 const Post =({movie})=>{
 
@@ -12,6 +13,7 @@ const Post =({movie})=>{
     const year = movie.year;
     const description = movie.description;
     const [toggleFetch, setToggleFetch] =useState(true);
+    const[redirectSelect, setRedirectSelect] = useState(false) ;
 
 
     const selectMovie =async(ev)=> {
@@ -35,9 +37,15 @@ const Post =({movie})=>{
         }
 
     await axios.post(API_URL, getMovieData);
-    setToggleFetch(!toggleFetch);
-    alert("movie has been added to your list")
+        setToggleFetch(!toggleFetch);
+        setRedirectSelect(true);
+    // alert("movie has been added to your list")
     }
+
+    if (redirectSelect){
+        return <Redirect to="/"/>
+    }        
+       
 
     return(
         <div>
