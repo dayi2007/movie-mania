@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Delete = ( {movieData} ) =>{
 
-    const API_URL=`https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=${process.env.REACT_APP_AIRTABLE_API_KEY}`
+    const API_URL=`https://api.airtable.com/v0/appp3kAXOCokemuoE/Table%201?api_key=${process.env.REACT_APP_AIRTABLE_API_KEY}`
 
     const[toggleFetch, setToggleFetch] =useState(true);
 
@@ -25,7 +25,7 @@ const Delete = ( {movieData} ) =>{
 
     return(
         <div>
-            <button className="select_button" onClick={deleteFromList}><span>Delete form List</span><span>Didn't Like it</span></button>
+            <button className="select_button" onClick={deleteFromList}><span>Delete!!!</span><span>Watched too Many Times</span></button>
         </div>
     )
 }

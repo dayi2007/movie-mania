@@ -6,6 +6,7 @@ import Form from './components/Form.jsx';
 import Post from './components/Post';
 import List from './components/List';
 import Select from './components/Select';
+import Recomend from './components/Recomend';
 
 // const API_URL= "https://imdb-api.com/en/API/SearchMovie"
 // const API_URL= "https://imdb-api.com/en/API/Search"
@@ -32,6 +33,7 @@ function App() {
       <nav>
         <li><Link to="/">Home</Link> </li>
         <li><Link to="/list">My List</Link></li>
+        <li><Link to="/recomend">Favorites</Link></li>
         <Form
            setMovieResults = {setMovieResults}
            movieResults = {movieResults} />        
@@ -71,6 +73,11 @@ function App() {
      <Route path="/list" exact>
       <h1>My List</h1>
         <List/>
+     </Route>
+
+     <Route path="/recomend" exact>
+      <h1>Share and Watch again</h1>
+        <Recomend  />
      </Route>
      
      </div>     

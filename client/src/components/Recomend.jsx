@@ -1,21 +1,20 @@
 import axios from "axios"
 import { useState, useEffect } from "react";
-import Delete from "./Delete";
-import Share from "./Share";
+import Delete from "./DeletePerm";
 
-const List = () =>{
+const Recomend = () =>{
     const [movies, setMovies] = useState();
     const[toggleFetch] =useState(true);
  
-    const API_URL=`https://api.airtable.com/v0/appY6Xnbt8rAL2ZGb/Table%201?api_key=${process.env.REACT_APP_AIRTABLE_API_KEY}`
+    const API_URL=`https://api.airtable.com/v0/appp3kAXOCokemuoE/Table%201?api_key=${process.env.REACT_APP_AIRTABLE_API_KEY}`
     
     useEffect (() => {
-    const listMovies = async () => {
+    const RecomendMovies = async () => {
       const resp = await axios.get(API_URL)
       setMovies(resp.data.records)
 
     }
-    listMovies();
+    RecomendMovies();
   }, [toggleFetch]);
 
 
@@ -27,17 +26,12 @@ const List = () =>{
                 <img src={movie.fields.image} alt={movie.fields.title}/>
                 <p>{movie.fields.year}</p>
                 <p>{movie.fields.description}</p>
-                <Share 
-                movie ={movie}
-                />
-                <br/>
-                < Delete 
+                < Delete
                 movieData = {movie}
                 />
-                
                 </div> 
             ))}
         </div>
     )
 } 
-export default List
+export default Recomend
