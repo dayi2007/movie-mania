@@ -24,11 +24,8 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 ```json
 const selectMovie =async(ev)=> {
         ev.preventDefault();
-        console.log("You Selected that movie") 
-        console.log(movie) 
-
-
-        console.log({title})
+        console.log("You Selected that movie");
+  
         const getMovieData ={
             records: [
                 { 
@@ -100,7 +97,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 Renders IMDB API and Takes information to Airtable, storing for future use.
 
 ### Weaknesses:
-Takes long to load sometimes.
+Takes long to load sometimes. API https://imdb-api.com/api
 
 ### Opportunities:
 Can get a like for a movie and get sugestions to movies that you  may like.
