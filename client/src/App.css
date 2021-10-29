@@ -303,13 +303,16 @@ label{
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
 
   input{
     line-height: 10px;     
     font-size: 10px;
  
   }  
+  form{
+    margin-top: 0px;
+  }
   #movie-search{
     line-height: 10px;  
     font-size: 10px;
