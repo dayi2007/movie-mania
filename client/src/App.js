@@ -73,8 +73,7 @@ function App() {
         <List/>
      </Route>
      
-     </div>
-     
+     </div>     
   </div>
   );
 }
